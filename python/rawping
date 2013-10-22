@@ -1,0 +1,26 @@
+#!/usr/bin/python
+
+# Copyright (C) 2013 NEC de Colombia/TX-NOC
+# Author: Carlos Uribe <cauribe@nec.com.co>
+
+import sys
+from ping import *
+
+if __name__ == '__main__':
+    address = sys.argv[1]
+    timeout = int(sys.argv[3])
+    size = int(sys.argv[4])
+    count = int(sys.argv[2])
+
+    for i in xrange(count):
+        try:
+            delay = do_one(address, timeout, size)
+        except socket.gaierror, e:
+            print "Failed. (socket error: '%s')" % e[1]
+            break
+
+        if delay == None:
+            print delay
+        else:
+            delay = delay * 1000
+            print "%0.4f ms" % delay
