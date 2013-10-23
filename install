@@ -5,4 +5,4 @@
 
 cp python/lib/ping.py /usr/bin
 cp python/rawping /usr/bin
-chmod +x /usr/bin/rawping
+chmod ugo+x /usr/bin/rawping
