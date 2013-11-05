@@ -2,6 +2,8 @@ Rawping
 =======
 Wrapper for [Pierre Bourdon's](https://pypi.python.org/pypi/ping) python ping implementation. It simplifies `verbose_ping()` function by printing just one RTT per line without statistics, easing integration with other tools. In addition, shell execution is enabled.
 
+As rawping uses raw ICMP requests for a very fast response, you must have root privileges to use it.
+
 Rawping is also part of [nec-tp](https://github.com/cm45t3r/nec-tp) and [nec-ping](https://github.com/cm45t3r/nec-ping) utilities.
 
 Installing
