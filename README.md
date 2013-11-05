@@ -6,7 +6,7 @@ Rawping is also part of [nec-tp](https://github.com/cm45t3r/nec-tp) and [nec-pin
 
 Installing
 ----------
-After clonning or copying the project, run `install` on a Unix shell enabling Command-line-access feature. This is not required whether you are thinking of running from a Python shell.
+After clonning or copying the project, run `./install` on a Unix shell enabling Command-line-access feature. This is not required whether you are thinking of running from a Python shell.
 
 Running
 -------
