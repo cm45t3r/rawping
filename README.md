@@ -13,11 +13,11 @@ Copy or clone the project:
 git clone https://github.com/cm45t3r/rawping.git
 ```
 
-Run ` sudo ./install` on a Unix shell to enable <b>command-line-access</b> feature. This is not required whether you are thinking of running from a Python shell.
+Run `./install` as root on a Unix shell to enable <b>command-line-access</b> feature. This is not required whether you are thinking of running from a Python shell.
 
 Running
 -------
-Command-line-access feature allows rawping to be run on a Unix or Python shell as it follows:
+<b>Command-line-access</b> feature allows rawping to be run on a Unix or Python shell as it follows:
 ```
 rawping <host> <count> <timeout> <packet size>
 ```
