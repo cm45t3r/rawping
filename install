@@ -1,5 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
+#	Rawping Installer
+#
+#	Author: Carlos Uribe <cauribe@nec.com.co>
 #   Copyright (C) 2013 NEC de Colombia/NOC-Tx
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,14 +17,10 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-# Rawping Installer
-# Author: Carlos Uribe <cauribe@nec.com.co>
-
-echo "====== Installing Rawping ======"
-
 # Checking prerequisites
 if [ `id -u` -eq 0 ]
 then
+	echo "====== Installing Rawping ======"
   echo "Copying files ..."
   cp python/lib/ping.py /usr/bin
   cp python/rawping /usr/bin
@@ -29,8 +28,8 @@ then
   echo "Granting permissions ..."
   chmod ugo+x /usr/bin/rawping
   
-  echo "Done."
+  echo "Done!"
 else
-  echo "You must have root privileges to install."
+  echo "You must have root privileges to install rawping."
   echo "Try 'sudo ./install' instead."
 fi

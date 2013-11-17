@@ -1,6 +1,6 @@
 Rawping
 =======
-Wrapper for [Pierre Bourdon's](https://pypi.python.org/pypi/ping) python ping implementation. It simplifies `verbose_ping()` function by printing just one RTT per line without statistics, easing integration with other tools. In addition, shell execution is enabled.
+Wrapper for [Pierre Bourdon's](https://pypi.python.org/pypi/ping) python ping implementation. It simplifies `verbose_ping()` function by printing one RTT per line and no statistics, easing integration with other tools. Unix shell execution is enabled.
 
 As rawping uses raw ICMP requests for a very fast response, you must have root privileges to use it.
 
@@ -8,7 +8,12 @@ Rawping is also part of [nec-tp](https://github.com/cm45t3r/nec-tp) and [nec-pin
 
 Installing
 ----------
-After clonning or copying the project, run `./install` on a Unix shell enabling Command-line-access feature. This is not required whether you are thinking of running from a Python shell.
+Copy or clone the project:
+```bash
+git clone https://github.com/cm45t3r/rawping.git
+```
+
+Run ` sudo ./install` on a Unix shell to enable <b>command-line-access</b> feature. This is not required whether you are thinking of running from a Python shell.
 
 Running
 -------
@@ -18,6 +23,6 @@ rawping <host> <count> <timeout> <packet size>
 ```
 
 - `host`: ip address or qualified network name.
-- `count`: number of simultaneous requests.
-- `timeout`: delay in seconds when no answer.
+- `count`: number of echo requests to send.
+- `timeout`: delay in seconds when there is no answer.
 - `packet size`: payload size in bytes.
