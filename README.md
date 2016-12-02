@@ -1,23 +1,27 @@
-Rawping
-=======
-Wrapper for [Pierre Bourdon's](https://pypi.python.org/pypi/ping) python ping implementation. It simplifies `verbose_ping()` function by printing one RTT per line and no statistics, easing integration with other tools. Unix shell execution is enabled.
+# Rawping
 
-As rawping uses raw ICMP requests for a very fast response, you must have root privileges to use it.
+Rawping is a command-line tool for lightweight fast ICMP ping requests. It wraps [Pierre Bourdon's](https://pypi.python.org/pypi/ping) ping implementation for python. It simplifies `verbose_ping()` output, showing RTTs and removing statistics.
 
-Rawping is also part of [nec-tp](https://github.com/cm45t3r/nec-tp) and [nec-ping](https://github.com/cm45t3r/nec-ping) utilities.
+Rawping allows the user to customize number of echos to perform, timeout and packet size for each request.
 
-Installing
-----------
-Copy or clone the project:
+## Installation
+
+To clone the project, write:
+
 ```bash
 git clone https://github.com/cm45t3r/rawping.git
 ```
 
-Run `./install` as root on a Unix shell to enable <b>command-line-access</b> feature. This is not required whether you are thinking of running from a Python shell.
+To install the most recent release, run:
 
-Running
--------
-<b>Command-line-access</b> feature allows rawping to be run on a Unix or Python shell as it follows:
+```bash
+sudo ./install
+```
+
+## Running the tool
+
+On a linux/unix shell, run:
+
 ```
 rawping <host> <count> <timeout> <packet size>
 ```
@@ -26,3 +30,20 @@ rawping <host> <count> <timeout> <packet size>
 - `count`: number of echo requests to send.
 - `timeout`: delay in seconds when there is no answer.
 - `packet size`: payload size in bytes.
+
+## Example
+
+```bash
+$ sudo rawping www.google.com 3 10 1
+63.5860 ms
+63.9200 ms
+68.4309 ms
+```
+
+## Contributing
+
+You are welcome to contribute to this tool creating issues and pull requests.
+
+## Licence
+
+This project is licensed under the MIT license. See the [LICENSE](https://github.com/cm45t3r/rawping/blob/master/LICENCE) file for more info.

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Rawping uninstaller.
+#
+# Author: Carlos Uribe <cm45t3r at gmail.com>
+# License MIT.
+
+# Checking prerequisites
+if [ `id -u` -eq 0 ]
+then
+	echo "====== Uninstalling rawping ======"
+	echo "Removing files ..."
+
+	rm -f /usr/bin/ping.py
+	rm -f /usr/bin/rawping
+
+	echo "Done!"
+else
+  echo "You must have root privileges to uninstall rawping."
+  echo "Run 'sudo ./uninstall'"
+fi
