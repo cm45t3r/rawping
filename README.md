@@ -1,8 +1,8 @@
 # Rawping
 
-Rawping is a command-line tool for lightweight fast ICMP ping requests. It wraps [Pierre Bourdon's](https://pypi.python.org/pypi/ping) ping implementation for python. It simplifies `verbose_ping()` output, showing RTTs and removing statistics.
+Rawping is a command-line tool for lightweight fast ICMP echo probes. It wraps [Pierre Bourdon's](https://pypi.python.org/pypi/ping) ping implementation for python. It extracts just RTTs from `verbose_ping()` and removes statistics.
 
-Rawping allows the user to customize number of echos to perform, timeout and packet size for each request.
+Rawping allows to set the number of echos, timeout and packet size for each request.
 
 ## Installation
 
